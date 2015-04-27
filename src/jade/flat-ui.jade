@@ -1,0 +1,520 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    title Flat UI - Bootstrap Framework
+    meta(content='', name='description')
+    meta(content='width=1000, initial-scale=1.0, maximum-scale=1.0', name='viewport')
+    link(href='stylesheets/styles.css', rel='stylesheet')
+    link(href='stylesheets/demo.css', rel='stylesheet')
+    link(href='images/favicon.ico', rel='shortcut icon')
+    //- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.
+    //- if lt IE 9
+      | [if lt IE 9]
+      | script src=&quot;js/html5shiv.js&quot;
+      | script src=&quot;js/respond.min.js&quot;
+  body
+    .container
+      .demo-headline
+        h1.demo-logo
+          .logo
+          | Flat UI
+          small User Interface Kit
+      h1.demo-section-title Basic elements
+      h3.demo-panel-title Buttons
+      .row.demo-row
+        .col-xs-3
+          a.btn.btn-block.btn-lg.btn-primary(href='#fakelink')  Primary Button
+        .col-xs-3
+          a.btn.btn-block.btn-lg.btn-warning(href='#fakelink')  Warning Button
+        .col-xs-3
+          a.btn.btn-block.btn-lg.btn-default(href='#fakelink')  Default Button
+        .col-xs-3
+          a.btn.btn-block.btn-lg.btn-danger(href='#fakelink')  Danger Button
+      .row.demo-row
+        .col-xs-3
+          a.btn.btn-block.btn-lg.btn-success(href='#fakelink')  Success Button
+        .col-xs-3
+          a.btn.btn-block.btn-lg.btn-inverse(href='#fakelink')  Inverse Button
+        .col-xs-3
+          a.btn.btn-block.btn-lg.btn-info(href='#fakelink')  Info Button
+        .col-xs-3
+          a.btn.btn-block.btn-lg.btn-default.disabled(href='#fakelink')  Disabled Button
+      h3.demo-panel-title Menu
+      .row.demo-row
+        .col-xs-9
+          nav.navbar.navbar-inverse.navbar-embossed(role='navigation')
+            .navbar-header
+              button.navbar-toggle(data-target='#navbar-collapse-01', data-toggle='collapse', type='button')
+                span.sr-only Toggle navigation
+            #navbar-collapse-01.collapse.navbar-collapse
+              ul.nav.navbar-nav.navbar-left
+                li
+                  a(href='#fakelink')
+                    | Menu Item
+                    span.navbar-unread 1
+                li.dropdown
+                  a.dropdown-toggle(data-toggle='dropdown', href='#')
+                    | Messages
+                    b.caret
+                  span.dropdown-arrow
+                  ul.dropdown-menu
+                    li
+                      a(href='#')  Action
+                    li
+                      a(href='#')  Another action
+                    li
+                      a(href='#')  Something else here
+                    li.divider
+                    li
+                      a(href='#')  Separated link
+                li
+                  a(href='#fakelink')  About Us
+        .col-xs-3
+          select.select-block(name='herolist', value='X-Men')
+            option(value='0')  Choose hero
+            option(value='1')  Spider Man
+            option(value='2')  Wolverine
+            option(value='3')  Captain America
+            option(selected='selected', value='X-Men')  X-Men
+            option(value='Crocodile')  Crocodile
+      h3.demo-panel-title Input
+      .row
+        .col-xs-3
+          .form-group
+            input.form-control(placeholder='Inactive', type='text', value='')
+        .col-xs-3
+          .form-group.has-error
+            input.form-control(type='text', value='Error')
+        .col-xs-3
+          .form-group.has-success
+            input.form-control(type='text', value='Success')
+            span.input-icon.fui-check-inverted
+        .col-xs-3
+          .form-group
+            input.form-control(disabled='disabled', type='text', value='Disabled')
+      .row
+        .col-xs-5
+          h3.demo-panel-title Progress bars &amp; Sliders
+          .progress
+            .progress-bar(style='width: 45%;')
+          br
+          .progress
+            .progress-bar(style='width: 40%;')
+            .progress-bar.progress-bar-warning(style='width: 10%;')
+            .progress-bar.progress-bar-danger(style='width: 10%;')
+            .progress-bar.progress-bar-success(style='width: 10%;')
+            .progress-bar.progress-bar-info(style='width: 10%;')
+          br
+          #slider.ui-slider
+            .ui-slider-segment
+            .ui-slider-segment
+            .ui-slider-segment
+        .col-xs-6.col-xs-offset-1
+          h3.demo-panel-title Navigation
+          .row.demo-navigation
+            .col-xs-6
+              .btn-toolbar
+                .btn-group
+                  a.btn.btn-primary(href='#fakelink')
+                    span.fui-time
+                  a.btn.btn-primary(href='#fakelink')
+                    span.fui-photo
+                  a.btn.btn-primary.active(href='#fakelink')
+                    span.fui-heart
+                  a.btn.btn-primary(href='#fakelink')
+                    span.fui-eye
+            .col-xs-6.demo-pager
+              ul.pager
+                li.previous
+                  a(href='#fakelink')
+                    span.fui-arrow-left
+                    span All messages
+                li.next
+                  a(href='#fakelink')
+                    span.fui-arrow-right
+          .pagination
+            ul
+              li.previous
+                a.fui-arrow-left(href='#fakelink')
+              li.active
+                a(href='#fakelink')  1
+              li
+                a(href='#fakelink')  2
+              li
+                a(href='#fakelink')  3
+              li
+                a(href='#fakelink')  4
+              li
+                a(href='#fakelink')  5
+              li
+                a(href='#fakelink')  6
+              li
+                a(href='#fakelink')  7
+              li
+                a(href='#fakelink')  8
+              li.next
+                a.fui-arrow-right(href='#fakelink')
+      .row
+        .col-xs-3
+          h3.demo-panel-title Checkboxes
+          label.checkbox(for='checkbox1')
+            input#checkbox1(data-toggle='checkbox', type='checkbox', value='')
+            | Unchecked
+          label.checkbox(for='checkbox2')
+            input#checkbox2(checked='', data-toggle='checkbox', type='checkbox', value='')
+            | Checked
+          label.checkbox(for='checkbox3')
+            input#checkbox3(data-toggle='checkbox', disabled='', type='checkbox', value='')
+            | Disabled unchecked
+          label.checkbox(for='checkbox4')
+            input#checkbox4(checked='', data-toggle='checkbox', disabled='', type='checkbox', value='')
+            | Disabled checked
+        // /checkboxes col-xs-3
+        .col-xs-3
+          h3.demo-panel-title Radio Buttons
+          label.radio
+            input#optionsRadios1(data-toggle='radio', name='optionsRadios', type='radio', value='option1')
+            | Radio is off
+          label.radio
+            input#optionsRadios2(checked='', data-toggle='radio', name='optionsRadios', type='radio', value='option1')
+            | Radio is on
+          label.radio
+            input#optionsRadios3(data-toggle='radio', disabled='', name='optionsRadiosDisabled', type='radio', value='option2')
+            | Disabled radio is off
+          label.radio
+            input#optionsRadios4(checked='', data-toggle='radio', disabled='', name='optionsRadiosDisabled', type='radio', value='option2')
+            | Disabled radio is on
+        // /radios col-xs-3
+        .col-xs-3
+          h3.demo-panel-title Switches
+          table(width='100%')
+            tr
+              td.pbm(width='50%')
+                input(checked='', data-toggle='switch', type='checkbox')
+              td.pbm
+                input(data-toggle='switch', type='checkbox')
+            tr
+              td.pbm
+                .switch.switch-square(data-off-label="<i class='fui-cross'></i>", data-on-label="<i class='fui-check'></i>")
+                  input(type='checkbox')
+              td.pbm
+                .switch.switch-square(data-off-label="<i class='fui-cross'></i>", data-on-label="<i class='fui-check'></i>")
+                  input(checked='', type='checkbox')
+            tr
+              td
+                input(data-toggle='switch', disabled='', type='checkbox')
+              td
+                input(checked='', data-toggle='switch', disabled='', type='checkbox')
+        // /toggles col-xs-3
+        .col-xs-3
+          h3.demo-panel-title Tags
+          input#tagsinput.tagsinput(name='tagsinput', value='Clean,Fresh,Modern,Unique')
+      // /row
+      .row
+        .col-xs-3
+          h3.demo-panel-title Switch
+          .share.mrl
+            ul
+              li
+                label.share-label(for='share-toggle2')  Switch01
+                input(data-toggle='switch', type='checkbox')
+              li
+                label.share-label(for='share-toggle4')  Switch02
+                input(checked='', data-toggle='switch', type='checkbox')
+              li
+                label.share-label(for='share-toggle6')  Switch03
+                input(data-toggle='switch', type='checkbox')
+            a.btn.btn-primary.btn-block.btn-large(href='#')  Send
+          // /share
+        .col-xs-3
+          .demo-tooltips
+            h3.demo-panel-title Tooltips
+            p(align='center', data-placement='bottom', data-toggle='tooltip', title='Tooltip under the text.')
+            p(align='center', data-toggle='tooltip', title='Here is the sample of talltooltip that contains three lines or more. More.')
+        // /col-xs-3 with tooltips
+      // /row
+      .demo-row.typography-row
+        .demo-title
+          h3.demo-panel-title Typography
+        .demo-content
+          .demo-type-example
+            h1
+              span.demo-heading-note  Header 1
+              | Maxime debitis enim excepturi vel
+          .demo-type-example
+            h2
+              span.demo-heading-note  Header 2
+              | Harum pariatur ratione sit neque error sit
+          .demo-type-example
+            h3
+              span.demo-heading-note  Header 3
+              | Sit molestiae veniam debitis
+          .demo-type-example
+            h4
+              span.demo-heading-note  Header 4
+              | Ratione qui aut molestiae laudantium voluptas omnis maxime quia est
+          .demo-type-example
+            h5
+              span.demo-heading-note  Header 5
+              | Ea voluptatem eligendi eum quod cumque eos necessitatibus eos nisi
+          .demo-type-example
+            h6
+              span.demo-heading-note  Header 6
+              | Impedit voluptatem reiciendis facilis et
+          .demo-type-example
+            span.demo-text-note Paragraph
+            p
+              | Placeat eos accusantium qui dolorum quod harum necessitatibus et ducimus vel sunt saepe qui doloribus&nbsp;
+              strong Est omnis est nihil error enim ut et
+              | Qui ut sit explicabo commodi
+          .demo-type-example
+            span.demo-text-note Image
+            img.img-rounded.img-responsive(alt='exaple-image', src='images/exaple-image.jpg')
+            p.img-comment
+              strong Note:
+              | Aut eos iusto cupiditate provident sint quia pariatur nihil accusamus
+          .demo-type-example
+            span.demo-text-note Lead Text
+            p.lead
+              | Dolorum et provident a necessitatibus dignissimos doloribus cupiditate et quis ab illum. ut ad quo sed sunt sed. qui et nihil eos perferendis sunt. quae atque et rerum non reiciendis eos dolorum hic nesciunt animi soluta qui
+          .demo-type-example
+            span.demo-text-note Quote
+            blockquote
+              | Aut adipisci est eos. corrupti tempore saepe omnis. cum nobis qui possimus pariatur ea sapiente reiciendis veritatis recusandae dolorum sunt corrupti. aperiam voluptatem voluptas ut fuga non ad voluptates et ullam. natus ut eum non ullam
+          .demo-type-example
+            span.demo-text-note Small Font
+            p
+              small
+                | Et in sit sint. et minus molestias maxime tempore suscipit esse aut nihil ut dolore deleniti ex commodi sint. omnis tempora cumque hic non adipisci expedita illo odio reiciendis ea sit dolores
+        // /.demo-content-wide
+      // /.demo-row
+      h3.demo-panel-title Color Swatches
+      .row.demo-swatches-row
+        .swatches-col
+          .pallete-item
+            dl.palette.palette-turquoise
+              dt #1abc9c
+              dd Turquoise
+            dl.palette.palette-green-sea
+              dt #16a085
+              dd Green sea
+          .pallete-item
+            dl.palette.palette-emerald
+              dt #2ecc71
+              dd Emerald
+            dl.palette.palette-nephritis
+              dt #27ae60
+              dd Nephritis
+          .pallete-item
+            dl.palette.palette-peter-river
+              dt #3498db
+              dd Peter river
+            dl.palette.palette-belize-hole
+              dt #2980b9
+              dd Belize hole
+          .pallete-item
+            dl.palette.palette-amethyst
+              dt #9b59b6
+              dd Amethyst
+            dl.palette.palette-wisteria
+              dt #8e44ad
+              dd Wisteria
+          .pallete-item
+            dl.palette.palette-wet-asphalt
+              dt #34495e
+              dd Wet asphalt
+            dl.palette.palette-midnight-blue
+              dt #2c3e50
+              dd Midnight blue
+          .pallete-item
+            dl.palette.palette-sun-flower
+              dt #f1c40f
+              dd Sun flower
+            dl.palette.palette-orange
+              dt #f39c12
+              dd Orange
+          .pallete-item
+            dl.palette.palette-carrot
+              dt #e67e22
+              dd Carrot
+            dl.palette.palette-pumpkin
+              dt #d35400
+              dd Pumpkin
+          .pallete-item
+            dl.palette.palette-alizarin
+              dt #e74c3c
+              dd Alizarin
+            dl.palette.palette-pomegranate
+              dt #c0392b
+              dd Pomegranate
+          .pallete-item
+            dl.palette.palette-clouds
+              dt #ecf0f1
+              dd Clouds
+            dl.palette.palette-silver
+              dt #bdc3c7
+              dd Silver
+          .pallete-item
+            dl.palette.palette-concrete
+              dt #95a5a6
+              dd Concrete
+            dl.palette.palette-asbestos
+              dt #7f8c8d
+              dd Asbestos
+        // /swatches items
+        .swatches-desc-col
+          h6.palette-headline SWATCHES
+          p.palette-paragraph
+            | Colors &mdash; is almost the most important part of the 
+            strong Flat UI
+            | . Better to use different shades of provided colors than new.
+          p.palette-paragraph
+            | For your convenience we also provide
+            strong Swatches Preset
+          p.palette-paragraph
+            strong No gradients, no shadows.
+        // /swatches desc
+      // /swatches row
+      h3.demo-panel-title
+        | Icons
+        small(14='14')
+      .demo-illustrations
+        .demo-content
+          div
+            img(alt='Toilet-Paper', src='images/icons/svg/toilet-paper.svg')
+          div
+            img(alt='Gift-Box', src='images/icons/svg/gift-box.svg')
+          div
+            img(alt='Pensils', src='images/icons/svg/pencils.svg')
+          div
+            img(alt='Clipboard', src='images/icons/svg/clipboard.svg')
+          div
+            img(alt='Retina', src='images/icons/svg/retina.svg')
+          div
+            img(alt='Compas', src='images/icons/svg/compas.svg')
+          div
+            img(alt='Map', src='images/icons/svg/map.svg')
+          div
+            img(alt='Chat', src='images/icons/svg/chat.svg')
+          div
+            img(alt='Mail', src='images/icons/svg/mail.svg')
+          div
+            img(alt='Book', src='images/icons/svg/book.svg')
+          div
+            img(alt='Calendar', src='images/icons/svg/calendar.svg')
+          div
+            img(alt='Pocket', src='images/icons/svg/paper-bag.svg')
+          div
+            img(alt='Watches', src='images/icons/svg/clocks.svg')
+          div
+            img(alt='Infinity-Loop', src='images/icons/svg/loop.svg')
+      h3.demo-panel-title
+        | Glyphs
+        small(30='30')
+      .demo-icons
+        .demo-content
+          span.fui-arrow-right
+          span.fui-arrow-left
+          span.fui-cmd
+          span.fui-check-inverted
+          span.fui-heart
+          span.fui-location
+          span.fui-plus
+          span.fui-check
+          span.fui-cross
+          span.fui-list
+          span.fui-new
+          span.fui-video
+          span.fui-photo
+          span.fui-volume
+          span.fui-time
+          span.fui-eye
+          span.fui-chat
+          span.fui-search
+          span.fui-user
+          span.fui-mail
+          span.fui-lock
+          span.fui-gear
+          span.fui-radio-unchecked
+          span.fui-radio-checked
+          span.fui-checkbox-unchecked
+          span.fui-checkbox-checked
+          span.fui-calendar-solid
+          span.fui-pause
+          span.fui-play
+          span.fui-check-inverted-2
+      // /icon font row
+      h1.demo-section-title.mbl.pbl Samples
+      .row.demo-samples
+        .col-xs-4
+          .todo
+            .todo-search
+              input.todo-search-field(placeholder='Search', type='search', value='')
+            ul
+              li.todo-done
+                .todo-icon.fui-user
+                .todo-content
+                  h4.todo-name
+                    | Meet
+                    strong Adrian
+                    | at
+                    strong 6pm
+                  | Times Square
+              li
+                .todo-icon.fui-list
+                .todo-content
+                  h4.todo-name
+                    | Chat with
+                    strong V.Kudinov
+                  | Skype conference an 9 am
+              li
+                .todo-icon.fui-eye
+                .todo-content
+                  h4.todo-name
+                    | Watch
+                    strong Iron Man
+                  | 1998 Broadway
+              li
+                .todo-icon.fui-time
+                .todo-content
+                  h4.todo-name
+                    | Fix bug on a
+                    strong Website
+                  | As soon as possible
+        // /todo list
+        .col-xs-8.demo-login
+          .login
+            .login-screen
+              .login-icon
+                img(alt='Welcome to Mail App', src='images/login/icon.png')
+                h4
+                  | Welcome to
+                  small Mail App
+              .login-form
+                .form-group
+                  input#login-name.form-control.login-field(placeholder='Enter your name', type='text', value='')
+                  label.login-field-icon.fui-user(for='login-name')
+                .form-group
+                  input#login-pass.form-control.login-field(placeholder='Password', type='password', value='')
+                  label.login-field-icon.fui-lock(for='login-pass')
+                a.btn.btn-primary.btn-lg.btn-block(href='#')  Login
+                a.login-link(href='#')  Lost your password?
+      // /tiles
+    // /container
+    footer
+      .container
+        .row
+    // Load JS here for greater good =============================
+    script(src='js/jquery-1.8.3.min.js')
+    script(src='js/jquery-ui-1.10.3.custom.min.js')
+    script(src='js/jquery.ui.touch-punch.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/bootstrap-select.js')
+    script(src='js/bootstrap-switch.js')
+    script(src='js/flatui-checkbox.js')
+    script(src='js/flatui-radio.js')
+    script(src='js/jquery.tagsinput.js')
+    script(src='js/jquery.placeholder.js')
+    script(src='js/jquery.stacktable.js')
+    script(src='http://vjs.zencdn.net/4.3/video.js')
+    script(src='js/application.js')

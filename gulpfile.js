@@ -64,6 +64,8 @@ gulp.task('jade', function () {
 
 // move static assets
 gulp.task('assets', function () {
+    gulp.src('./src/html/**')
+        .pipe(gulp.dest('./dist'));
     gulp.src('./src/bower_components/**')
         .pipe(gulp.dest('./dist/bower_components'));
     gulp.src('./src/images/**')
